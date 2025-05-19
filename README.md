@@ -7,7 +7,7 @@ Write a query to find customers with at least one funded savings plan AND one fu
 # Approach
 
 - **For the owner_id**: per the description, I reviewed a sample of all tables and confirmed that the 'id' on the users_customuser table is the user original ID and the owner_id in the other tables aligns with it.
-- **name**: I used the first name and last name column from the users_customuser table to combine as the 'name' column.
+- **name**: I comined the first name and last name columns from the users_customuser table to form as the 'name' column.
 - **savings_count**: Per the description,_ is_regular_savings = 1_ was used for the Savings column which was gotten from the plans_plan table.
 - **investment_count**: Also _is_a_fund = 1_ was used as our Investment column which was gotten fron the plans_plan table.
 - **total_deposits**: The total deposites was from the amount(Kobo) in savings_savingsaccount table
