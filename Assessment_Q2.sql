@@ -17,7 +17,6 @@ FROM (
             DATE_FORMAT(savings_savingsaccount.transaction_date, '%Y-%m') AS month_year,
             COUNT(savings_savingsaccount.transaction_status) AS transaction_count
         FROM savings_savingsaccount
-        WHERE savings_savingsaccount.transaction_status <> 'pending'
         GROUP BY savings_savingsaccount.owner_id, month_year
     ) AS monthly
     JOIN users_customuser ON users_customuser.id = monthly.owner_id
